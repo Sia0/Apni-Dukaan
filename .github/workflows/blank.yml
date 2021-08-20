@@ -69,13 +69,6 @@ jobs:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           github-token: ${{ secrets.TOKEN }}
           css-path: ./build/style.css
-          
-      - uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt-openj9'
-          java-version: '11'
-          java-package: jdk # optional (jdk or jre) - defaults to jdk
-      - run: java -cp java Test/test.java
 
       - uses: actions/setup-dotnet@v1
         with:
