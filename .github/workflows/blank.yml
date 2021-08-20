@@ -77,3 +77,7 @@ jobs:
           java-package: jdk # optional (jdk or jre) - defaults to jdk
       - run: java -cp java Test/test.java
 
+      - name: Maven Package
+        run: mvn -B clean package -DskipTests
+      - name: Maven Verify
+        run: mvn -B clean verify
