@@ -6,7 +6,7 @@ public class test {
 		strs.add("StringOne");
 		System.out.println("Hello World");
 		for(int i = 0; i < strs.length; i++){
-			System.out.println(strs[0]);
+			System.out.println(strs.get(i));
 		}
 	}
 
