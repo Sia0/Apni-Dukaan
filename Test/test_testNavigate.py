@@ -21,7 +21,7 @@ class TestTestNavigate():
   def test_testNavigate(self):
     self.driver.get("https://sia0.github.io/Apni-Dukaan/contactus.html")
     self.driver.set_window_size(780, 820)
-    self.driver.find_element(By.LINK_TEXT, "Home").click()
+    self.driver.find_element(By.LINK_TEXT, "Homes").click()
     self.driver.find_element(By.CSS_SELECTOR, ".navbar-toggler-icon").click()
     self.driver.find_element(By.LINK_TEXT, "Login").click()
     
