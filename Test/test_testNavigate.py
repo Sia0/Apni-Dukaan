@@ -24,4 +24,6 @@ class TestTestNavigate():
     self.driver.find_element(By.LINK_TEXT, "Home").click()
     self.driver.find_element(By.CSS_SELECTOR, ".navbar-toggler-icon").click()
     self.driver.find_element(By.LINK_TEXT, "Login").click()
+    
+  print('Hello World')
   
