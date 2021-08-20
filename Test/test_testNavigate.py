@@ -18,7 +18,7 @@ class Testing(unittest.TestCase):
     self.driver.set_window_size(1552, 840)
     self.driver.find_element(By.LINK_TEXT, "Home").click()
     self.driver.find_element(By.LINK_TEXT, "FAQ").click()
-    self.assertEqual(sum((1, 2, 2)), 6, "Should be 6")
+    self.assertEqual(sum((1, 2, 2)), 5, "Should be 6")
     self.driver.quit()
   
 if __name__ == "__main__":
