@@ -26,7 +26,7 @@ class TestTestNavigate():
     self.driver.find_element(By.CSS_SELECTOR, ".navbar-toggler-icon").click()
     self.driver.find_element(By.LINK_TEXT, "Login").click()
     
-   def test_sum():
-    assert sum([1, 2, 3]) == 7, "Should be 6"
+  def test_sum():
+   assert sum([1, 2, 3]) == 7, "Should be 6"
   print('Hello World')
   
