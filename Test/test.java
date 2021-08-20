@@ -5,7 +5,7 @@ public class test {
 		ArrayList<String> strs = new ArrayList<String>();
 		strs.add("StringOne");
 		System.out.println("Hello World");
-		for(int i = 0; i < strs.length(); i++){
+		for(int i = 0; i < strs.size(); i++){
 			System.out.println(strs.get(i));
 		}
 	}
