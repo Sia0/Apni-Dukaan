@@ -70,10 +70,16 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           css-path: ./build/style.css
 
-      - name: Set up JDK 15
-        uses: actions/setup-java@v2
+      - name: Setup .Net Core
+        uses: actions/setup-dotnet@v1
         with:
-          java-version: '15'
-          distribution: 'adopt'
-      - name: Build with Maven
-        run: mvn clean test
+          dotnet-version: 3.1.301
+      - name: Install dependencies
+        run: dotnet restore
+      
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal
+      
+        
