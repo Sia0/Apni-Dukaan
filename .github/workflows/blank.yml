@@ -69,3 +69,9 @@ jobs:
           project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
           github-token: ${{ secrets.TOKEN }}
           css-path: ./build/style.css
+          
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt' # See 'Supported distributions' for available options
+          java-version: '11'
+      - run: java -cp java Test/test.java
