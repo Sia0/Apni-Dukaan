@@ -77,7 +77,8 @@ jobs:
           java-package: jdk # optional (jdk or jre) - defaults to jdk
       - run: java -cp java Test/test.java
 
-      - name: Maven Package
-        run: mvn -B clean package -DskipTests
-      - name: Maven Verify
-        run: mvn -B clean verify
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.x' 
+      - run: dotnet restore
+      - run: dotnet build --configuration Release --no-restore
