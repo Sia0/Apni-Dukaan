@@ -68,13 +68,6 @@ jobs:
           name: log
           path: log.log
           
-      - name: Project Wallace Diff
-        uses: projectwallace/css-diff-action@master
-        with:
-          project-wallace-token: ${{ secrets.PROJECT_WALLACE_TOKEN }}
-          github-token: ${{ secrets.TOKEN }}
-          css-path: ./build/style.css
-          
       - uses: actions/checkout@v2
       - uses: nanasess/setup-chromedriver@master
       - run: |
