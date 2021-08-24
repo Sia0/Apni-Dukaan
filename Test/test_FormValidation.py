@@ -49,9 +49,6 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.ID, "validationCustom02").click()
     self.driver.find_element(By.ID, "validationCustom02").send_keys("chongperngsia@hotmail.com")
     self.driver.find_element(By.ID, "validationCustom03").click()
-    self.driver.find_element(By.ID, "validationCustom03").send_keys("Hi there I love this website!")
-    self.driver.implicitly_wait(5)
-    self.driver.find_element(By.ID, "submit-btn").click()
     self.driver.quit()
 
 if __name__ == "__main__":
