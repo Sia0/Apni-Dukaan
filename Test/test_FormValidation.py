@@ -40,10 +40,10 @@ class TestFormValidation(unittest.TestCase):
     actions.move_to_element(element).release().perform()
     self.driver.find_element(By.CSS_SELECTOR, ".input-container:nth-child(2)").click()
     self.driver.find_element(By.ID, "validationCustom02").click()
-    nameInput = self.driver.find_element(By.ID, "validationCustom01").get_attribute("class")
-    print(nameInput)
-    invalid = "is-invalid" in nameInput
-    self.assertFalse(invalid, "Should not display invalid name message")
+    nameInput2 = self.driver.find_element(By.ID, "validationCustom01").get_attribute("class")
+    print(nameInput2)
+    invalid2 = "is-invalid" in nameInput2
+    self.assertFalse(invalid2, "Should not display invalid name message")
     self.driver.find_element(By.ID, "validationCustom02").send_keys("chongperngsia")
     self.driver.find_element(By.CSS_SELECTOR, ".input-container:nth-child(2)").click()
     self.driver.find_element(By.ID, "validationCustom02").click()
