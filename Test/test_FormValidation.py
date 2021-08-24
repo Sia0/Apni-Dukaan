@@ -23,6 +23,7 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.ID, "contactus").click()
     nameInput = self.driver.find_element(By.ID, "validationCustom01").get_attribute("class")
     invalid = "is-invalid" in nameInput
+    print(nameInput)
     self.assertTrue(invalid, "Should have display invalid name message")
     self.driver.find_element(By.ID, "validationCustom01").click()
     self.driver.find_element(By.ID, "validationCustom01").send_keys("Sia Chong Perng")
