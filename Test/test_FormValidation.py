@@ -6,10 +6,11 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
 
 class TestFormValidation(unittest.TestCase):
   def test_FormValidation(self):
@@ -49,6 +50,7 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.ID, "validationCustom02").send_keys("chongperngsia@hotmail.com")
     self.driver.find_element(By.ID, "validationCustom03").click()
     self.driver.find_element(By.ID, "validationCustom03").send_keys("Hi there I love this website!")
+    self.driver.implicitly_wait(5)
     self.driver.find_element(By.ID, "submit-btn").click()
     self.driver.quit()
 
