@@ -28,7 +28,8 @@ class TestFormValidation(unittest.TestCase):
     actions.move_to_element(element).release().perform()
     self.driver.find_element(By.CSS_SELECTOR, ".input-container:nth-child(2)").click()
     invMsgClass = self.driver.find_element(By.ID, "invalidNameMsg").get_attribute("class")
-    print(invMsgClass)
+    print("class in " + invMsgClass + " End.")
+    print(self.driver.find_element(By.ID, "invalidNameMsg").is_displayed())
     invalid = "is_invalid" in invMsgClass
     self.assertTrue(invalid, "Should have is_invalid class")
     self.driver.find_element(By.ID, "validationCustom01").click()
