@@ -14,7 +14,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 class Testing(unittest.TestCase):
   def test_testNavigate(self):
     self.driver = webdriver.Chrome()
-    self.driver.get("https://christineleong1711.github.io/Apni-Dukaan/")
+    self.driver.get("https://sia0.github.io/Apni-Dukaan/mobile.html")
     self.driver.set_window_size(1296, 705)
     self.driver.find_element(By.LINK_TEXT, "Home").click()
     self.driver.find_element(By.CSS_SELECTOR, ".nav-item:nth-child(5) > .nav-link").click()
