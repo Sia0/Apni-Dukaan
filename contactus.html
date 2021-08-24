@@ -48,12 +48,12 @@
                   <div class="input-container">
                     <label class="contact-inputs" for="validationCustom01">Your Name :</label>
                     <input type="text" class="form-control contact-inputs-tags" required id="validationCustom01" placeholder="Enter your name" name="name" onchange="validateFormInput()">
-                    <p class="invalid-feedback">Invalid name entered. Digits and symbols are not allowed.</p>
+                    <p id="invalidNameMsg" class="invalid-feedback">Invalid name entered. Digits and symbols are not allowed.</p>
                   </div>
                   <div class="input-container">
                     <label class="contact-inputs" for="validationCustom02">Your Email :</label>
                     <input type="email" class="form-control contact-input-tags" required id="validationCustom02" placeholder="Enter your email address" name="email" onchange="validateFormInput()">
-                    <p class="invalid-feedback">Invalid email entered.</p>
+                    <p id="invalidEmailMsg" class="invalid-feedback">Invalid email entered.</p>
                   </div>
                   <div class="input-container">
                     <label class="contact-inputs" for="validationCustom03">Message :</label>
