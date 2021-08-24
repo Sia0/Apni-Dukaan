@@ -36,6 +36,7 @@ class TestFormValidation(unittest.TestCase):
     actions = ActionChains(self.driver)
     actions.move_to_element(element).click_and_hold().perform()
     nameInput = self.driver.find_element(By.ID, "validationCustom01").get_attribute("class")
+    print(nameInput)
     invalid = "is-invalid" in nameInput
     self.assertFalse(invalid, "Should not display invalid name message")
     element = self.driver.find_element(By.ID, "invalidEmailMsg")
