@@ -20,7 +20,7 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.CSS_SELECTOR, ".nav-item:nth-child(3) > .nav-link").click()
     self.driver.find_element(By.ID, "validationCustom01").click()
     self.driver.find_element(By.ID, "validationCustom01").send_keys("Sia Chong Perng5")
-    invMsgClass = driver.find_element(By.ID, "invalidNameMsg").getAttribute("class")
+    invMsgClass = self.driver.find_element(By.ID, "invalidNameMsg").getAttribute("class")
     print(invMsgClass)
     print("Enter")
     self.assertTrue(invalid, "Should be display")
