@@ -25,15 +25,18 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.ID, "validationCustom01").click()
     nameInput = self.driver.find_element(By.ID, "validationCustom01")
     #invalid = "is-invalid" in nameInput.get_attribute("class")
+    print(nameInput.text)
     print(nameInput.get_attribute("class"))
     #self.assertTrue(invalid, "Should have display invalid name message")
     self.driver.find_element(By.ID, "validationCustom01").send_keys("Sia Chong Perng")
     self.driver.find_element(By.CSS_SELECTOR, ".center-div").click()
     self.driver.find_element(By.CSS_SELECTOR, ".center-div").click()
+    print(nameInput.text)
     print(nameInput.get_attribute("class"))
     #nameInput = self.driver.find_element(By.ID, "validationCustom01").get_attribute("class")
     #invalid = "is-invalid" in nameInput
     #self.assertFalse(invalid, "Should have display invalid name message")
+    print(nameInput.text)
     print(nameInput.get_attribute("class"))
     self.driver.find_element(By.ID, "validationCustom02").click()
     self.driver.find_element(By.ID, "validationCustom02").send_keys("chongperng")
@@ -43,5 +46,6 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.CSS_SELECTOR, ".center-div").click()
     self.driver.quit()
 
+
 if __name__ == "__main__":
- unittest.main()
+  unittest.main()
