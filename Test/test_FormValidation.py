@@ -22,9 +22,9 @@ class TestFormValidation(unittest.TestCase):
     self.driver.find_element(By.ID, "validationCustom01").send_keys("Sia Chong Perng5")
     self.driver.find_element(By.ID, "contactus").click()
     self.driver.implicitly_wait(10)
-    nameInput = self.driver.find_element(By.ID, "validationCustom01").get_attribute("class")
-    invalid = "is-invalid" in nameInput
-    print(nameInput)
+    nameInput = self.driver.find_element(By.ID, "validationCustom01")
+    invalid = "is-invalid" in nameInput.get_attribute("class")
+    print(nameInput.get_attribute("class"))
     self.assertTrue(invalid, "Should have display invalid name message")
     self.driver.find_element(By.ID, "validationCustom01").click()
     self.driver.find_element(By.ID, "validationCustom01").send_keys("Sia Chong Perng")
