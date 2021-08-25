@@ -61,9 +61,11 @@ function validateFormInput(){
   if(/^[a-zA-Z\0 ]*$/.test(name) && name != ""){
     nameValid = true;
     document.getElementById("validationCustom01").classList.remove("is-invalid");
+    console.log(document.getElementById("validationCustom01").classList);
   }else{
     nameValid = false;
     document.getElementById("validationCustom01").classList.add("is-invalid");
+    console.log(document.getElementById("validationCustom01").classList);
   }
 
   if(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})$/.test(email) && email != ""){
