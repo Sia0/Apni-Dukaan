@@ -12,7 +12,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 # Check that the validation for name and email is working fine
 class TestFAQ(unittest.TestCase):
-  def TestFAQ(self):
+  def test_FAQ(self):
     self.driver = webdriver.Chrome()
     self.driver.get("https://sia0.github.io/Apni-Dukaan/")
     self.driver.set_window_size(1552, 840)
