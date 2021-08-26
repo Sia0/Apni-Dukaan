@@ -3,13 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 class Testing(unittest.TestCase):
-    def setup_method(self, method):
-        self.driver = webdriver.Chrome()
-
-    def teardown_method(self, method):
-        self.driver.quit()
-
     def test_navigationBar(self):
+        self.driver = webdriver.Chrome()  
         url = "https://sia0.github.io/Apni-Dukaan/stationery.html"
         self.driver.get(url)
         self.driver.find_element(By.LINK_TEXT, "Home").click()
@@ -41,5 +36,9 @@ class Testing(unittest.TestCase):
         self.driver.get(url)
         self.driver.find_element(By.ID, "navbarDropdown").click()
         self.driver.find_element(By.LINK_TEXT, "Stationery").click()
+        self.driver.quit()
+    
+    if __name__ == "__main__":
+        unittest.main()
 
 
