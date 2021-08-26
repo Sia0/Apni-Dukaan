@@ -16,7 +16,7 @@ class Testing(unittest.TestCase):
         url = "https://sia0.github.io/Apni-Dukaan/stationery.html"
         self.driver.get(url)
         self.driver.set_window_size(1296, 705)
-        self.driver.find_element(By.LINK_TEXT, "Home").click()
+        self.driver.find_element(By.XPATH, "//a[contains(@href, './index.html')]").click()
         self.driver.get(url)
         self.driver.find_element(By.LINK_TEXT, "Offers").click()
         self.driver.get(url)
